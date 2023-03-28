@@ -1,3 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 /* Digital clock style start */
+
+.container__time {
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #10101E;
+}
+
+.date__time {
+    color: #fff;
+    background: #10101E;
+    font-family: 'Segoe UI', sans-serif;
+    width: 340px;
+    padding: 15px 10px;
+    border: 3px solid #2E94E3;
+    border-radius: 5px;
+}
 
 /* Digital clock style end */
