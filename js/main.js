@@ -42,7 +42,7 @@ window.onload = function() {
         let clock = hours + ":" + minutes + ":" + seconds;
         let fullDate = day + ", " + month + ", " + Year;
         document.getElementById("clock").innerHTML = clock;
-        document.getElementById("DATE").innerHTML = fullDate;
+        document.getElementById("fullDate").innerHTML = fullDate;
     }, 1000);
 };
 
