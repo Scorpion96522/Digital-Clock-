@@ -34,34 +34,20 @@ window.onload = function() {
         let Year = date.getFullYear();
         let month = (date.getMonth() + 1);
         let day = date.getDay();
+        let dnum = date.getDate();
 
 
         if (hours < 10) hours = "0" + hours;
         if (minutes < 10) minutes = "0" + minutes;
         if (seconds < 10) seconds = "0" + seconds;
+        if (day < 10) day = "0" + day;
+        if (month < 10) month = "0" + month;
+
+
         let clock = hours + ":" + minutes + ":" + seconds;
-        let fullDate = day + ", " + month + ", " + Year;
+        let fullDate = dnum + ", " + month + ", " + Year + ", " + day;
         document.getElementById("clock").innerHTML = clock;
         document.getElementById("fullDate").innerHTML = fullDate;
     }, 1000);
 };
 
-// function addLeadingZero(date) {
-//     return(date < 10 ) ? "0" + date : date;
-// }
-
-const date = new Date();
-console.log(date.getFullYear());
-console.log(date.getMonth());
-console.log(date.getDate());
-console.log(date.getDay());
-
-function ustime(t) {
-    let Y = t.getFullYear();
-    let M = (t.getMonth() + 1);
-    let D = t.getDate();
-
-    console.log(Y, M, D);
-}
-
-console.log(ustime)
