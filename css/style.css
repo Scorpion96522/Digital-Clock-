@@ -13,7 +13,7 @@ align-items: center;
 background: #10101E;
 }
 
-.date__time {
+.datetime {
     color: #fff;
     background: #10101E;
     font-family: 'Segoe UI', sans-serif;
@@ -26,7 +26,7 @@ background: #10101E;
     transition-property: background, box-shadow;
 }
 
-.date__time:hover {
+.datetime:hover {
     background: #2E94E3;
     box-shadow: 0 0 30px #2E94E3
 }

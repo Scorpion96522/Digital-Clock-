@@ -8,15 +8,15 @@
     <title>Digital Clock  With Date (Day, Month, Year)</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body onload="initClock()">
     <main>
         <!-- Digital clock start  -->
         <div class="container__time">
-            <div class="date__time">
+            <div class="datetime">
                 <div class="date" id="fullDate">
-                    <span id="day__name">Day</span>,
+                    <span id="dayname">Day</span>,
                     <span id="month">Month</span>
-                    <span id="day__num">00</span>,
+                    <span id="daynum">00</span>,
                     <span id="year">Year</span>
                 </div>
                 <div class="time" id="clock">
@@ -26,7 +26,7 @@
                     <span id="period">AM</span>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
 
 
         <!-- Digital clock end -->
