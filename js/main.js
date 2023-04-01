@@ -10,13 +10,27 @@ function updateClock() {
         sec = now.getSeconds(),
         pe = "AM";
 
+        if (hou == 0){
+            hou = 12;
+        }
+        if (hou > 12){
+            hou = hou -12;
+            pe = "PM";
+        }
+
+        Number.prototype.pad = function(digits){
+            for(var n = this.toString(); n.length < digits; n = 0 + n);
+            return n;
+        }
+
         let months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"]
-        let week = ['Понедельник', 'Вторник',' Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскрессение']
+        let week = ['Воскрессение', 'Понедельник',' Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота']
         let ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"]
-        let values = [week[dname], months[mo], dnum, yr, hou, min, sec, pe];
+        let values = [week[dname], months[mo], dnum.pad(2), yr, hou, min.pad(2), sec.pad(2), pe];
         for(let i = 0; i < ids.length; i++)
         document.getElementById(ids[i]).firstChild.nodeValue = values[i];
 };
+
 
 function initClock() {
     updateClock();
